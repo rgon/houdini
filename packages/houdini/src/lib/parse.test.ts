@@ -1,6 +1,6 @@
 import { test, expect, describe } from 'vitest'
 
-import { parseJS, parseJSON } from './parse'
+import { parseJS, parseJSON } from './parse.js'
 
 describe('parse', function () {
 	test('parseJSON without comments', async function () {

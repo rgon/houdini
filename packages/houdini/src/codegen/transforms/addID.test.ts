@@ -1,7 +1,7 @@
 import { test, expect } from 'vitest'
 
-import { runPipeline } from '../../codegen'
-import { testConfig, mockCollectedDoc } from '../../test'
+import { runPipeline } from '../../codegen/index.js'
+import { testConfig, mockCollectedDoc } from '../../test/index.js'
 
 test('adds ids to selection sets of objects with them', async function () {
 	const docs = [

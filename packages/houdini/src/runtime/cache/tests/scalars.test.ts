@@ -1,10 +1,10 @@
 import { test, expect } from 'vitest'
 
-import { testConfigFile } from '../../../test'
-import type { SubscriptionSelection } from '../../lib/types'
-import { RefetchUpdateMode } from '../../lib/types'
-import { Cache } from '../cache'
-import { rootID } from '../stuff'
+import { testConfigFile } from '../../../test/index.js'
+import type { SubscriptionSelection } from '../../lib/types.js'
+import { RefetchUpdateMode } from '../../lib/types.js'
+import { Cache } from '../cache.js'
+import { rootID } from '../stuff.js'
 
 const config = testConfigFile({
 	scalars: {

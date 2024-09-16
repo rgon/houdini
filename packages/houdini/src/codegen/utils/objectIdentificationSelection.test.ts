@@ -1,8 +1,8 @@
 import type * as graphql from 'graphql'
 import { expect, test } from 'vitest'
 
-import { testConfig } from '../../test'
-import { objectIdentificationSelection } from './objectIdentificationSelection'
+import { testConfig } from '../../test/index.js'
+import { objectIdentificationSelection } from './objectIdentificationSelection.js'
 
 test('go to default id', () => {
 	const config = testConfig()

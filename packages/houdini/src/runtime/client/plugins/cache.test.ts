@@ -1,11 +1,11 @@
 import { beforeEach, expect, test, vi } from 'vitest'
 
-import { testConfigFile } from '../../../test'
-import { Cache } from '../../cache/cache'
-import { CachePolicy, PendingValue } from '../../lib'
-import { setMockConfig } from '../../lib/config'
-import { cachePolicy } from './cache'
-import { createStore, fakeFetch } from './test'
+import { testConfigFile } from '../../../test/index.js'
+import { Cache } from '../../cache/cache.js'
+import { CachePolicy, PendingValue } from '../../lib/index.js'
+import { setMockConfig } from '../../lib/config.js'
+import { cachePolicy } from './cache.js'
+import { createStore, fakeFetch } from './test.js'
 
 /**
  * Testing the cache plugin

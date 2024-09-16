@@ -1,10 +1,10 @@
 import * as graphql from 'graphql'
 import { test, expect } from 'vitest'
 
-import { runPipeline } from '../../..'
-import { mockCollectedDoc, testConfig } from '../../../../test'
-import { flattenSelections } from '../../../utils'
-import selection from '../selection'
+import { runPipeline } from '../../../index.js'
+import { mockCollectedDoc, testConfig } from '../../../../test/index.js'
+import { flattenSelections } from '../../../utils/index.js'
+import selection from '../selection.js'
 
 test('fragments of unions inject correctly', function () {
 	const document = graphql.parse(`

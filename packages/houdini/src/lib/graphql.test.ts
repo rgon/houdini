@@ -1,8 +1,8 @@
 import * as graphql from 'graphql'
 import { test, expect, describe } from 'vitest'
 
-import { testConfig } from '../test'
-import { TypeWrapper, unwrapType } from './graphql'
+import { testConfig } from '../test/index.js'
+import { TypeWrapper, unwrapType } from './graphql.js'
 
 describe('unwrapType', () => {
 	test('nullable list of non-null', function () {

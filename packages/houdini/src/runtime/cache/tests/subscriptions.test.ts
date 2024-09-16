@@ -1,10 +1,10 @@
 import { test, expect, vi } from 'vitest'
 
-import { testConfigFile } from '../../../test'
-import type { SubscriptionSelection } from '../../lib'
-import { RefetchUpdateMode } from '../../lib'
-import { Cache } from '../cache'
-import { rootID } from '../stuff'
+import { testConfigFile } from '../../../test/index.js'
+import type { SubscriptionSelection } from '../../lib/index.js'
+import { RefetchUpdateMode } from '../../lib/index.js'
+import { Cache } from '../cache.js'
+import { rootID } from '../stuff.js'
 
 const config = testConfigFile()
 

@@ -1,8 +1,8 @@
 import * as graphql from 'graphql'
 import { expect, test } from 'vitest'
 
-import type { Document } from '../../lib'
-import { pipelineTest, testConfig } from '../../test'
+import type { Document } from '../../lib/index.js'
+import { pipelineTest, testConfig } from '../../test/index.js'
 
 test('include fragment definitions', async function () {
 	const start = [

@@ -1,7 +1,7 @@
 import { test, expect } from 'vitest'
 
-import { runPipeline } from '../../..'
-import { mockCollectedDoc, testConfig } from '../../../../test'
+import { runPipeline } from '../../../index.js'
+import { mockCollectedDoc, testConfig } from '../../../../test/index.js'
 
 test('persists loading behavior in selection', async function () {
 	// the config to use in tests

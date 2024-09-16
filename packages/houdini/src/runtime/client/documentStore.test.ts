@@ -1,12 +1,12 @@
 import { sleep } from '@kitql/helpers'
 import { test, expect, vi, beforeEach } from 'vitest'
 
-import { createPluginHooks, HoudiniClient } from '.'
-import { setMockConfig } from '../lib/config'
-import type { GraphQLObject } from '../lib/types'
-import { ArtifactKind, DataSource } from '../lib/types'
-import type { ClientPlugin } from './documentStore'
-import { DocumentStore } from './documentStore'
+import { createPluginHooks, HoudiniClient } from './index.js'
+import { setMockConfig } from '../lib/config.js'
+import type { GraphQLObject } from '../lib/types.js'
+import { ArtifactKind, DataSource } from '../lib/types.js'
+import type { ClientPlugin } from './documentStore.js'
+import { DocumentStore } from './documentStore.js'
 
 beforeEach(() => {
 	setMockConfig({

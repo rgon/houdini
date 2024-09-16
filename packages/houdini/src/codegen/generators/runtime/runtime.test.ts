@@ -3,10 +3,10 @@ import * as recast from 'recast'
 import * as typeScriptParser from 'recast/parsers/typescript'
 import { test, expect } from 'vitest'
 
-import { runPipeline } from '../..'
-import { fs, path } from '../../../lib'
-import type { Document } from '../../../lib/types'
-import { testConfig, mockCollectedDoc } from '../../../test'
+import { runPipeline } from '../../index.js'
+import { fs, path } from '../../../lib/index.js'
+import type { Document } from '../../../lib/types.js'
+import { testConfig, mockCollectedDoc } from '../../../test/index.js'
 
 test('updates the config file with import path', async function () {
 	const config = testConfig({ module: 'esm' })

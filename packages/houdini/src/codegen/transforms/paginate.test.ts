@@ -1,7 +1,7 @@
 import { expect, test } from 'vitest'
 
-import { runPipeline } from '../../codegen'
-import { mockCollectedDoc, testConfig } from '../../test'
+import { runPipeline } from '../../codegen/index.js'
+import { mockCollectedDoc, testConfig } from '../../test/index.js'
 
 test('adds pagination info to full', async function () {
 	const docs = [

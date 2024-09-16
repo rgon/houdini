@@ -1,9 +1,9 @@
 import { test, expect, describe } from 'vitest'
 
-import { runPipeline } from '../../..'
-import type { Document } from '../../../../lib'
-import { fs } from '../../../../lib'
-import { mockCollectedDoc, testConfig } from '../../../../test'
+import { runPipeline } from '../../../index.js'
+import type { Document } from '../../../../lib/index.js'
+import { fs } from '../../../../lib/index.js'
+import { mockCollectedDoc, testConfig } from '../../../../test/index.js'
 
 test('generates an artifact for every document', async function () {
 	// the config to use in tests

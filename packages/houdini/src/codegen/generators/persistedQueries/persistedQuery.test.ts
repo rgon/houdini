@@ -1,9 +1,9 @@
 import { test, expect, beforeEach } from 'vitest'
 
-import { runPipeline } from '../../../codegen'
-import type { Config, Document } from '../../../lib'
-import { fs, path } from '../../../lib'
-import { mockCollectedDoc, testConfig } from '../../../test'
+import { runPipeline } from '../../../codegen/index.js'
+import type { Config, Document } from '../../../lib/index.js'
+import { fs, path } from '../../../lib/index.js'
+import { mockCollectedDoc, testConfig } from '../../../test/index.js'
 
 let config: Config
 let docs: Document[]

@@ -2,10 +2,10 @@
 import * as graphql from 'graphql'
 import { test, expect } from 'vitest'
 
-import { runPipeline } from '../..'
-import type { Document } from '../../../lib'
-import { fs } from '../../../lib'
-import { mockCollectedDoc, testConfig } from '../../../test'
+import { runPipeline } from '../../index.js'
+import type { Document } from '../../../lib/index.js'
+import { fs } from '../../../lib/index.js'
+import { mockCollectedDoc, testConfig } from '../../../test/index.js'
 
 const config = testConfig()
 

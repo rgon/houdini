@@ -1,9 +1,9 @@
 import * as graphql from 'graphql'
 import { expect, test } from 'vitest'
 
-import { runPipeline } from '../../codegen'
-import { fs } from '../../lib'
-import { mockCollectedDoc, testConfig } from '../../test'
+import { runPipeline } from '../../codegen/index.js'
+import { fs } from '../../lib/index.js'
+import { mockCollectedDoc, testConfig } from '../../test/index.js'
 
 test('insert fragments on query selection set', async function () {
 	const docs = [

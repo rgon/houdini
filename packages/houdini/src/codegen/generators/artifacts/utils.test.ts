@@ -1,6 +1,6 @@
 import { test, expect } from 'vitest'
 
-import { serializeValue } from './utils'
+import { serializeValue } from './utils.js'
 
 test('can serialize keys with next', async () => {
 	expect(serializeValue({ next: '1' })).toMatchInlineSnapshot(`

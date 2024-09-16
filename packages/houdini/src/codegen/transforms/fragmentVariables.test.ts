@@ -4,10 +4,10 @@ import * as recast from 'recast'
 import * as typeScriptParser from 'recast/parsers/typescript'
 import { test, expect, describe } from 'vitest'
 
-import { runPipeline } from '../../codegen'
-import { fs, path } from '../../lib'
-import { testConfig, mockCollectedDoc } from '../../test'
-import { parseArgumentTypeString } from './fragmentVariables'
+import { runPipeline } from '../../codegen/index.js'
+import { fs, path } from '../../lib/index.js'
+import { testConfig, mockCollectedDoc } from '../../test/index.js'
+import { parseArgumentTypeString } from './fragmentVariables.js'
 
 test('pass argument values to generated fragments', async function () {
 	const docs = [

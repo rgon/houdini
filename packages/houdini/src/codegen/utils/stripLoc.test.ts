@@ -1,7 +1,7 @@
 import type * as graphql from 'graphql'
 import { expect, test, describe } from 'vitest'
 
-import { stripLoc } from './stripLoc'
+import { stripLoc } from './stripLoc.js'
 
 describe('stripLoc', function () {
 	const table: { name: string; value: graphql.ValueNode; expected: graphql.ValueNode }[] = [

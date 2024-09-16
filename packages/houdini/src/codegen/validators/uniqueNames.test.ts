@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 
-import type { Row } from '../../test'
-import { pipelineTest, testConfig } from '../../test'
+import type { Row } from '../../test/index.js'
+import { pipelineTest, testConfig } from '../../test/index.js'
 
 const table: Row[] = [
 	{

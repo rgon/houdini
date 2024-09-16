@@ -1,8 +1,8 @@
 import * as graphql from 'graphql'
 import { test, expect, describe } from 'vitest'
 
-import { testConfig } from '../../test'
-import { flattenSelections } from './flattenSelections'
+import { testConfig } from '../../test/index.js'
+import { flattenSelections } from './flattenSelections.js'
 
 const config = testConfig({ defaultFragmentMasking: 'disable' })
 

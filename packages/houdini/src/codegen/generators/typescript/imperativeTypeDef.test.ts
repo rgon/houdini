@@ -3,9 +3,9 @@ import * as recast from 'recast'
 import * as typeScriptParser from 'recast/parsers/typescript'
 import { test, expect } from 'vitest'
 
-import { runPipeline } from '../..'
-import { fs, path } from '../../../lib'
-import { mockCollectedDoc, testConfig } from '../../../test'
+import { runPipeline } from '../../index.js'
+import { fs, path } from '../../../lib/index.js'
+import { mockCollectedDoc, testConfig } from '../../../test/index.js'
 
 const config = testConfig({
 	schema: `

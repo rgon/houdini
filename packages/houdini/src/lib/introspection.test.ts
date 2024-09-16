@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 
-import { extractHeaders, extractHeadersStr } from './introspection'
+import { extractHeaders, extractHeadersStr } from './introspection.js'
 
 describe('extractHeaders', () => {
 	test('undefined', function () {

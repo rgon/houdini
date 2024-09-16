@@ -1,9 +1,9 @@
 import { describe, expect, test } from 'vitest'
 
-import { path } from '.'
-import { testConfig } from '../test'
-import type { PluginMeta } from './config'
-import { orderedPlugins, readConfigFile } from './config'
+import { path } from './index.js'
+import { testConfig } from '../test/index.js'
+import type { PluginMeta } from './config.js'
+import { orderedPlugins, readConfigFile } from './config.js'
 
 describe('loadConfig', function () {
 	test('handles malformed config file', async () => {

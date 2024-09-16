@@ -1,7 +1,7 @@
 import { test, expect } from 'vitest'
 
-import { runPipeline } from '../../codegen'
-import { mockCollectedDoc, testConfig } from '../../test'
+import { runPipeline } from '../../codegen/index.js'
+import { mockCollectedDoc, testConfig } from '../../test/index.js'
 
 test('adds __typename on interface selection sets under query', async function () {
 	const docs = [

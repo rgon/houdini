@@ -1,9 +1,9 @@
 import * as graphql from 'graphql'
 import { test, expect, describe } from 'vitest'
 
-import fieldKey from '../../codegen/generators/artifacts/fieldKey'
-import { testConfig } from '../../test'
-import { computeKey } from './key'
+import fieldKey from '../../codegen/generators/artifacts/fieldKey.js'
+import { testConfig } from '../../test/index.js'
+import { computeKey } from './key.js'
 
 const config = testConfig()
 

@@ -1,13 +1,13 @@
 import { sleep } from '@kitql/helpers'
 import { beforeEach, expect, test } from 'vitest'
 
-import { testConfigFile } from '../../../test'
-import { Cache } from '../../cache/cache'
-import { setMockConfig } from '../../lib/config'
-import { ArtifactKind, type QueryResult, type GraphQLObject } from '../../lib/types'
-import { mutation } from './mutation'
-import { optimisticKeys } from './optimisticKeys'
-import { createStore, fakeFetch } from './test'
+import { testConfigFile } from '../../../test/index.js'
+import { Cache } from '../../cache/cache.js'
+import { setMockConfig } from '../../lib/config.js'
+import { ArtifactKind, type QueryResult, type GraphQLObject } from '../../lib/types.js'
+import { mutation } from './mutation.js'
+import { optimisticKeys } from './optimisticKeys.js'
+import { createStore, fakeFetch } from './test.js'
 
 /**
  * Testing the cache plugin
