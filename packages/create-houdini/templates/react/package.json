@@ -16,7 +16,7 @@
 		"react-dom": "19.0.0-rc-eb259b5d3b-20240605",
 		"graphql-yoga": "4.0.4",
 		"graphql": "15.8.0",
-		"@whatwg-node/server": "^0.9.14"
+		"@whatwg-node/server": "^0.9.49"
 	},
 	"devDependencies": {
 		"@vitejs/plugin-react": "^4.3.1",
