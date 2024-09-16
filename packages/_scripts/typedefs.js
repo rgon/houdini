@@ -6,7 +6,7 @@ import path from 'path'
 import ts from 'typescript'
 
 const { ModuleResolutionKind } = ts
-const tsConfig = JSON.parse(fsSync.readFileSync('../../tsconfig.json', 'utf-8'))
+const tsConfig = ts.readJsonConfigFile('../../tsconfig.json'); // ts.sys.readFile
 
 // we'll generate the types for every file in the package in one go
 export default async function generate_typedefs({ plugin }) {
@@ -22,7 +22,7 @@ export default async function generate_typedefs({ plugin }) {
 	// compile the types
 	compile(files, {
 		...tsConfig.compilerOptions,
-		moduleResolution: ModuleResolutionKind.NodeJs,
+		moduleResolution: ModuleResolutionKind.NodeNext,
 		outDir: 'build',
 		project: path.join(process.cwd(), '..', '..'),
 		baseUrl: process.cwd(),
