@@ -1,4 +1,4 @@
-import type { Cache } from './cache'
+import type { Cache } from './cache.js'
 
 export class GarbageCollector {
 	cache: Cache

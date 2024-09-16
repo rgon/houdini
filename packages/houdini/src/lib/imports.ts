@@ -1,6 +1,6 @@
 import * as recast from 'recast'
 
-import type { Config } from './config'
+import type { Config } from './config.js'
 
 const AST = recast.types.builders
 

@@ -1,5 +1,5 @@
-import type { Config } from '../../lib/config'
-import type { Document } from '../../lib/types'
+import type { Config } from '../../lib/config.js'
+import type { Document } from '../../lib/types.js'
 
 export default async function validatePlugins(config: Config, documents: Document[]) {
 	let errors: unknown[] = []

@@ -1,7 +1,7 @@
-import type { GraphQLVariables } from '$houdini/runtime/lib/types'
+import type { GraphQLVariables } from '$houdini/runtime/lib/types.js'
 
-import { parseScalar, type ConfigFile } from '../lib'
-import type { RouterManifest, RouterPageManifest } from './types'
+import { parseScalar, type ConfigFile } from '../lib/index.js'
+import type { RouterManifest, RouterPageManifest } from './types.js'
 
 /**
  * This file is copied from the SvelteKit source code under the MIT license found at the bottom of the file

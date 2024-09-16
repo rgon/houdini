@@ -14,16 +14,16 @@ import type {
 } from 'rollup'
 import type { ConfigEnv, ResolvedConfig, UserConfig, ViteDevServer } from 'vite'
 
-import type { ConfigFile } from '../runtime/lib/config'
+import type { ConfigFile } from '../runtime/lib/config.js'
 import type {
 	ArtifactKinds,
 	BaseCompiledDocument,
 	DocumentArtifact,
 	ValueOf,
-} from '../runtime/lib/types'
-import type { TransformPage } from '../vite/houdini'
-import type { Config } from './config'
-import type { Adapter } from './router'
+} from '../runtime/lib/types.js'
+import type { TransformPage } from '../vite/houdini.js'
+import type { Config } from './config.js'
+import type { Adapter } from './router/index.js'
 
 type Program = recast.types.namedTypes.Program
 
@@ -368,8 +368,8 @@ export type GenerateHookInput = {
 
 export type PluginConfig = { configPath?: string; adapter?: Adapter } & Partial<ConfigFile>
 
-export * from '../runtime/lib/types'
-export * from '../runtime/lib/config'
-export * from '../runtime/client'
+export * from '../runtime/lib/types.js'
+export * from '../runtime/lib/config.js'
+export * from '../runtime/client/index.js'
 
 export type ValueMap = Record<string, graphql.ValueNode>

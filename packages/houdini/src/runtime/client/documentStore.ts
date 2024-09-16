@@ -1,11 +1,11 @@
-import type { HoudiniClient } from '.'
-import type { Cache } from '../cache/cache'
-import type { Layer } from '../cache/storage'
-import type { ConfigFile } from '../lib/config'
-import { getCurrentConfig } from '../lib/config'
-import { deepEquals } from '../lib/deepEquals'
-import { marshalInputs } from '../lib/scalars'
-import { Writable } from '../lib/store'
+import type { HoudiniClient } from '../index.js'
+import type { Cache } from '../cache/cache.js'
+import type { Layer } from '../cache/storage.js'
+import type { ConfigFile } from '../lib/config.js'
+import { getCurrentConfig } from '../lib/config.js'
+import { deepEquals } from '../lib/deepEquals.js'
+import { marshalInputs } from '../lib/scalars.js'
+import { Writable } from '../lib/store.js'
 import type {
 	DocumentArtifact,
 	QueryResult,
@@ -14,9 +14,9 @@ import type {
 	SubscriptionSpec,
 	CachePolicies,
 	GraphQLVariables,
-} from '../lib/types'
-import { ArtifactKind } from '../lib/types'
-import { cachePolicy } from './plugins'
+} from '../lib/types.js'
+import { ArtifactKind } from '../lib/types.js'
+import { cachePolicy } from './plugins/index.js'
 
 // the list of states to step in what direction
 const steps = {

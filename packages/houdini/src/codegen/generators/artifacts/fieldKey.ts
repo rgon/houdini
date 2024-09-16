@@ -1,6 +1,6 @@
 import * as graphql from 'graphql'
 
-import type { Config, PaginateModes } from '../../../lib'
+import type { Config, PaginateModes } from '../../../lib/index.js'
 
 // we need to generate a static key that we can use to index this field in the cache.
 // this needs to be a unique hash driven by the field's attribute and arguments

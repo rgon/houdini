@@ -1,7 +1,7 @@
-import type { Cache } from '../../cache/cache'
-import type { RuntimeScalarPayload } from '../../lib'
-import { type SubscriptionSpec, ArtifactKind, DataSource } from '../../lib/types'
-import { documentPlugin } from '../utils'
+import type { Cache } from '../../cache/cache.js'
+import type { RuntimeScalarPayload } from '../../lib/index.js'
+import { type SubscriptionSpec, ArtifactKind, DataSource } from '../../lib/types.js'
+import { documentPlugin } from '../utils/index.js'
 
 export const query = (cache: Cache) =>
 	documentPlugin(ArtifactKind.Query, function () {

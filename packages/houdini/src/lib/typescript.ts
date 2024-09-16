@@ -2,8 +2,8 @@ import type { StatementKind, TSTypeKind } from 'ast-types/lib/gen/kinds'
 import * as graphql from 'graphql'
 import * as recast from 'recast'
 
-import { ensureImports, type Config, path, fs } from '.'
-import { unwrapType, TypeWrapper } from './graphql'
+import { ensureImports, type Config, path, fs } from './index.js'
+import { unwrapType, TypeWrapper } from './graphql.js'
 
 const AST = recast.types.builders
 

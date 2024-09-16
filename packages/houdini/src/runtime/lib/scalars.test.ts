@@ -1,10 +1,10 @@
 import { test, expect, describe, beforeEach } from 'vitest'
 
-import { testConfigFile } from '../../test'
-import { defaultConfigValues, setMockConfig } from './config'
-import { marshalInputs, marshalSelection, parseScalar } from './scalars'
-import type { QueryArtifact, SubscriptionSelection } from './types'
-import { ArtifactKind } from './types'
+import { testConfigFile } from '../../test/index.js'
+import { defaultConfigValues, setMockConfig } from './config.js'
+import { marshalInputs, marshalSelection, parseScalar } from './scalars.js'
+import type { QueryArtifact, SubscriptionSelection } from './types.js'
+import { ArtifactKind } from './types.js'
 
 const config = defaultConfigValues({
 	scalars: {

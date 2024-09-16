@@ -1,8 +1,8 @@
 import type { GraphQLSchema } from 'graphql'
 
-import config from '../imports/config'
-import pluginConfigs from '../imports/pluginConfig'
-import type { CachePolicies, PaginateModes } from './types'
+import config from '../imports/config.js'
+import pluginConfigs from '../imports/pluginConfig.js'
+import type { CachePolicies, PaginateModes } from './types.js'
 
 let mockConfig: ConfigFile | null = null
 

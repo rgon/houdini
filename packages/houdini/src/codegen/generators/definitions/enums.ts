@@ -1,10 +1,10 @@
 import * as graphql from 'graphql'
 import * as recast from 'recast'
 
-import type { Config } from '../../../lib'
-import { fs, path, printJS } from '../../../lib'
-import { moduleExport } from '../../utils'
-import { jsdocComment } from '../comments/jsdoc'
+import type { Config } from '../../../lib/index.js'
+import { fs, path, printJS } from '../../../lib/index.js'
+import { moduleExport } from '../../utils/index.js'
+import { jsdocComment } from '../comments/jsdoc.js'
 
 const AST = recast.types.builders
 

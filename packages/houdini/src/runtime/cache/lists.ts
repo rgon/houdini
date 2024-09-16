@@ -1,8 +1,8 @@
-import { flatten } from '../lib/flatten'
-import type { SubscriptionSelection, ListWhen, SubscriptionSpec, NestedList } from '../lib/types'
-import type { Cache } from './cache'
-import type { Layer } from './storage'
-import { rootID } from './stuff'
+import { flatten } from '../lib/flatten.js'
+import type { SubscriptionSelection, ListWhen, SubscriptionSpec, NestedList } from '../lib/types.js'
+import type { Cache } from './cache.js'
+import type { Layer } from './storage.js'
+import { rootID } from './stuff.js'
 
 export class ListManager {
 	rootID: string

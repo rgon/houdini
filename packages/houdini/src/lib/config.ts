@@ -3,23 +3,23 @@ import * as graphql from 'graphql'
 import minimatch from 'minimatch'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 
-import type { CachePolicies, ConfigFile, PaginateModes } from '../runtime/lib'
-import { CachePolicy, PaginateMode } from '../runtime/lib'
+import type { CachePolicies, ConfigFile, PaginateModes } from '../runtime/lib/index.js'
+import { CachePolicy, PaginateMode } from '../runtime/lib/index.js'
 import {
 	computeID,
 	defaultConfigValues,
 	keyFieldsForType,
 	localApiEndpoint,
-} from '../runtime/lib/config'
-import { houdini_mode } from './constants'
-import { HoudiniError } from './error'
-import * as fs from './fs'
-import { pullSchema } from './introspection'
-import * as path from './path'
-import { plugin } from './plugin'
-import { type Adapter, loadLocalSchema } from './router'
-import type { LogLevels, PluginConfig, PluginHooks, PluginInit, ValueMap } from './types'
-import { LogLevel } from './types'
+} from '../runtime/lib/config.js'
+import { houdini_mode } from './constants.js'
+import { HoudiniError } from './error.js'
+import * as fs from './fs.js'
+import { pullSchema } from './introspection.js'
+import * as path from './path.js'
+import { plugin } from './plugin.js'
+import { type Adapter, loadLocalSchema } from './router/index.js'
+import type { LogLevels, PluginConfig, PluginHooks, PluginInit, ValueMap } from './types.js'
+import { LogLevel } from './types.js'
 
 // @ts-ignore
 const currentDir = path.dirname(fileURLToPath(import.meta.url))

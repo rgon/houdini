@@ -1,13 +1,13 @@
-import { testConfigFile } from '../../../test'
-import { Cache as _Cache } from '../../cache/cache'
+import { testConfigFile } from '../../../test/index.js'
+import { Cache as _Cache } from '../../cache/cache.js'
 import {
 	ArtifactKind,
 	type SubscriptionSelection,
 	type FragmentArtifact,
 	type QueryArtifact,
-} from '../../lib'
-import { Cache } from '../cache'
-import type { Record } from '../record'
+} from '../../lib/index.js'
+import { Cache } from '../cache.js'
+import type { Record } from '../record.js'
 
 // the type definition for our test cache
 export type CacheTypeDefTest = {

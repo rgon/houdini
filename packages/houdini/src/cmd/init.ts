@@ -2,7 +2,7 @@ import * as p from '@clack/prompts'
 import { bold, cyan, gray, green, italic } from 'kleur/colors'
 import { execSync } from 'node:child_process'
 
-import type { HoudiniFrameworkInfo } from '../lib'
+import type { HoudiniFrameworkInfo } from '../lib/index.js'
 import {
 	detectTools,
 	extractHeaders,
@@ -11,8 +11,8 @@ import {
 	parseJSON,
 	path,
 	pullSchema,
-} from '../lib'
-import type { ConfigFile } from '../runtime/lib/config'
+} from '../lib/index.js'
+import type { ConfigFile } from '../runtime/lib/config.js'
 
 function pCancel(cancelText = 'Operation cancelled.') {
 	p.cancel(cancelText)

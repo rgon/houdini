@@ -1,11 +1,11 @@
 import structuredClone from '@ungap/structured-clone'
 import * as graphql from 'graphql'
 
-import { type Config, type Document, type ValueMap, HoudiniError, ArtifactKind } from '../../lib'
-import { murmurHash } from '../utils'
-import { stripLoc } from '../utils/stripLoc'
-import type { FragmentDependency } from './collectDefinitions'
-import { collectDefinitions } from './collectDefinitions'
+import { type Config, type Document, type ValueMap, HoudiniError, ArtifactKind } from '../../lib/index.js'
+import { murmurHash } from '../utils/index.js'
+import { stripLoc } from '../utils/stripLoc.js'
+import type { FragmentDependency } from './collectDefinitions.js'
+import { collectDefinitions } from './collectDefinitions.js'
 
 const GraphqlKinds = graphql.Kind
 

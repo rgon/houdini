@@ -1,6 +1,6 @@
 import type * as graphql from 'graphql'
 
-import type { GraphQLValue } from '../../lib'
+import type { GraphQLValue } from '../../lib/index.js'
 
 export function stripLoc<
 	T extends

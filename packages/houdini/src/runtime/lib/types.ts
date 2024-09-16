@@ -17,7 +17,7 @@ export const PaginateMode = {
 
 export type PaginateModes = ValuesOf<typeof PaginateMode>
 
-export * from '../router/types'
+export * from '../router/types.js'
 
 declare global {
 	namespace App {

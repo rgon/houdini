@@ -1,12 +1,12 @@
 import * as graphql from 'graphql'
 
-import type { Config, Document } from '../../lib'
-import { HoudiniError, parentTypeFromAncestors, unwrapType, wrapType } from '../../lib'
-import { ArtifactKind, type PaginateModes } from '../../runtime/lib/types'
+import type { Config, Document } from '../../lib/index.js'
+import { HoudiniError, parentTypeFromAncestors, unwrapType, wrapType } from '../../lib/index.js'
+import { ArtifactKind, type PaginateModes } from '../../runtime/lib/types.js'
 import {
 	fragmentArguments as collectFragmentArguments,
 	type FragmentArgument,
-} from '../transforms/fragmentVariables'
+} from '../transforms/fragmentVariables.js'
 
 // the paginate transform is responsible for preparing a fragment marked for pagination
 // to be embedded in the query that will be used to fetch additional data. That means it

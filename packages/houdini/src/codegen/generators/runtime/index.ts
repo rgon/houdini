@@ -1,11 +1,11 @@
-import { exportDefault, exportStarFrom, importDefaultFrom } from '../../../codegen/utils'
-import type { Config, Document } from '../../../lib'
-import { siteURL as SITE_URL, fs, path } from '../../../lib'
-import generateGraphqlReturnTypes from './graphqlFunction'
-import injectPlugins from './injectPlugins'
-import { generatePluginIndex } from './pluginIndex'
-import { generatePluginRuntimes } from './pluginRuntime'
-import { injectConfig } from './runtimeConfig'
+import { exportDefault, exportStarFrom, importDefaultFrom } from '../../../codegen/utils/index.js'
+import type { Config, Document } from '../../../lib/index.js'
+import { siteURL as SITE_URL, fs, path } from '../../../lib/index.js'
+import generateGraphqlReturnTypes from './graphqlFunction.js'
+import injectPlugins from './injectPlugins.js'
+import { generatePluginIndex } from './pluginIndex.js'
+import { generatePluginRuntimes } from './pluginRuntime.js'
+import { injectConfig } from './runtimeConfig.js'
 
 export default async function runtimeGenerator(config: Config, docs: Document[]) {
 	const {

@@ -1,7 +1,7 @@
 import { green } from '@kitql/helpers'
 import * as graphql from 'graphql'
 
-import type { Config, Document, PaginateModes } from '../../lib'
+import type { Config, Document, PaginateModes } from '../../lib/index.js'
 import {
 	HoudiniError,
 	LogLevel,
@@ -10,13 +10,13 @@ import {
 	parentTypeFromAncestors,
 	siteURL,
 	unwrapType,
-} from '../../lib'
-import type { FragmentArgument } from '../transforms/fragmentVariables'
+} from '../../lib/index.js'
+import type { FragmentArgument } from '../transforms/fragmentVariables.js'
 import {
 	fragmentArguments as collectFragmentArguments,
 	withArguments,
-} from '../transforms/fragmentVariables'
-import { connectionSelection } from '../transforms/list'
+} from '../transforms/fragmentVariables.js'
+import { connectionSelection } from '../transforms/list.js'
 
 // typeCheck verifies that the documents are valid instead of waiting
 // for the compiler to fail later down the line.

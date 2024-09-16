@@ -7,15 +7,15 @@ import type { BaseNode } from 'estree-walker'
 import { asyncWalk } from 'estree-walker'
 import * as graphql from 'graphql'
 
-import type { CompiledDocumentKind } from '../runtime/lib/types'
+import type { CompiledDocumentKind } from '../runtime/lib/types.js'
 import {
 	CompiledFragmentKind,
 	CompiledMutationKind,
 	CompiledQueryKind,
 	CompiledSubscriptionKind,
-} from '../runtime/lib/types'
-import type { Config } from './config'
-import type { Script } from './types'
+} from '../runtime/lib/types.js'
+import type { Config } from './config.js'
+import type { Script } from './types.js'
 
 export type EmbeddedGraphqlDocument = {
 	parsedDocument: graphql.DocumentNode

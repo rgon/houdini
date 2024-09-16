@@ -3,16 +3,16 @@ import minimatch from 'minimatch'
 import type { Plugin } from 'vite'
 import watch_and_run from 'vite-plugin-watch-and-run'
 
-import generate from '../codegen'
-import type { PluginConfig } from '../lib'
-import { getConfig, formatErrors, path } from '../lib'
-import houdini_vite from './houdini'
-import { watch_local_schema, watch_remote_schema } from './schema'
+import generate from '../codegen/index.js'
+import type { PluginConfig } from '../lib/index.js'
+import { getConfig, formatErrors, path } from '../lib/index.js'
+import houdini_vite from './houdini.js'
+import { watch_local_schema, watch_remote_schema } from './schema.js'
 
-export * from './ast'
-export * from './imports'
-export * from './schema'
-export * from './houdini'
+export * from './ast.js'
+export * from './imports.js'
+export * from './schema.js'
+export * from './houdini.js'
 
 export default function (opts?: PluginConfig): (Plugin | null)[] {
 	// we need some way for the graphql tag to detect that we are running on the server

@@ -1,6 +1,6 @@
-import { moduleStatments } from '.'
-import type { Config, Document } from '../../../lib'
-import { fs, HoudiniError, path, houdini_mode } from '../../../lib'
+import { moduleStatments } from './index.js'
+import type { Config, Document } from '../../../lib/index.js'
+import { fs, HoudiniError, path, houdini_mode } from '../../../lib/index.js'
 
 export async function generatePluginRuntimes({
 	config,

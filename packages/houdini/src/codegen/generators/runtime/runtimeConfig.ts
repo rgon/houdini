@@ -1,4 +1,4 @@
-import type { Config } from '../../../lib'
+import type { Config } from '../../../lib/index.js'
 
 export async function injectConfig({
 	config,

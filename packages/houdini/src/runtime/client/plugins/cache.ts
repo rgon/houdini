@@ -1,7 +1,7 @@
-import cache from '../../cache'
-import { Cache } from '../../cache/cache'
-import { ArtifactKind, CachePolicy, DataSource, type GraphQLObject } from '../../lib/types'
-import type { ClientPlugin } from '../documentStore'
+import cache from '../../cache/index.js'
+import { Cache } from '../../cache/cache.js'
+import { ArtifactKind, CachePolicy, DataSource, type GraphQLObject } from '../../lib/types.js'
+import type { ClientPlugin } from '../documentStore.js'
 
 const serverSide = typeof globalThis.window === 'undefined'
 

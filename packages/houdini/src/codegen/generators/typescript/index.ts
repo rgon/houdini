@@ -1,6 +1,6 @@
-import type { Config, Document } from '../../../lib'
-import { generateDocumentTypes } from './documentTypes'
-import imperativeCacheTypedef from './imperativeTypeDef'
+import type { Config, Document } from '../../../lib/index.js'
+import { generateDocumentTypes } from './documentTypes.js'
+import imperativeCacheTypedef from './imperativeTypeDef.js'
 
 // typescriptGenerator generates typescript definitions for the artifacts
 export default async function typescriptGenerator(config: Config, docs: Document[]) {

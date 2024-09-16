@@ -1,10 +1,10 @@
 import { vi } from 'vitest'
 
-import { createPluginHooks, HoudiniClient, type HoudiniClientConstructorArgs } from '..'
-import type { DocumentArtifact, GraphQLObject, QueryResult } from '../../lib'
-import { ArtifactKind, DataSource } from '../../lib/types'
-import type { ClientPlugin, ClientPluginContext } from '../documentStore'
-import { DocumentStore } from '../documentStore'
+import { createPluginHooks, HoudiniClient, type HoudiniClientConstructorArgs } from '../index.js'
+import type { DocumentArtifact, GraphQLObject, QueryResult } from '../../lib/index.js'
+import { ArtifactKind, DataSource } from '../../lib/types.js'
+import type { ClientPlugin, ClientPluginContext } from '../documentStore.js'
+import { DocumentStore } from '../documentStore.js'
 
 /**
  * Utilities for testing the cache plugin

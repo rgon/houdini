@@ -1,4 +1,4 @@
-import { getConfig, pullSchema, path } from '../lib'
+import { getConfig, pullSchema, path } from '../lib/index.js'
 
 export default async function (args: { headers: string[]; output?: string }) {
 	const config = await getConfig({ noSchema: true })

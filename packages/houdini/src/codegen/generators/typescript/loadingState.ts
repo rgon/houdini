@@ -1,4 +1,4 @@
-import type { StatementKind, TSPropertySignatureKind, TSTypeKind } from 'ast-types/lib/gen/kinds'
+import type { StatementKind, TSPropertySignatureKind, TSTypeKind } from 'ast-types/lib/gen/kinds.js'
 import * as recast from 'recast'
 
 import {
@@ -7,9 +7,9 @@ import {
 	ensureImports,
 	type SubscriptionSelection,
 	fragmentKey,
-} from '../../../lib'
-import { readonlyProperty } from '../../../lib/typescript'
-import { getFieldsForType } from '../../../runtime/lib/selection'
+} from '../../../lib/index.js'
+import { readonlyProperty } from '../../../lib/typescript.js'
+import { getFieldsForType } from '../../../runtime/lib/selection.js'
 
 const AST = recast.types.builders
 

@@ -1,10 +1,10 @@
 import { mergeTypeDefs } from '@graphql-tools/merge'
 import * as graphql from 'graphql'
 
-import type { Config, Document } from '../../lib'
-import { siteURL } from '../../lib'
-import { CachePolicy, PaginateMode } from '../../runtime/lib/types'
-import { fragmentArguments } from './fragmentVariables'
+import type { Config, Document } from '../../lib/index.js'
+import { siteURL } from '../../lib/index.js'
+import { CachePolicy, PaginateMode } from '../../runtime/lib/types.js'
+import { fragmentArguments } from './fragmentVariables.js'
 
 // graphqlExtensions adds a few different things to the graphql schema
 export default async function graphqlExtensions(

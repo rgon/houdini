@@ -1,16 +1,16 @@
-import type { TSTypeKind, StatementKind } from 'ast-types/lib/gen/kinds'
+import type { TSTypeKind, StatementKind } from 'ast-types/lib/gen/kinds.js'
 import * as graphql from 'graphql'
 import * as recast from 'recast'
 
-import type { Config } from '../../../lib'
-import { ensureImports, HoudiniError, TypeWrapper, unwrapType } from '../../../lib'
+import type { Config } from '../../../lib/index.js'
+import { ensureImports, HoudiniError, TypeWrapper, unwrapType } from '../../../lib/index.js'
 import {
 	nullableField,
 	readonlyProperty,
 	scalarPropertyValue,
 	enumReference,
-} from '../../../lib/typescript'
-import { jsdocComment } from '../comments/jsdoc'
+} from '../../../lib/typescript.js'
+import { jsdocComment } from '../comments/jsdoc.js'
 
 const AST = recast.types.builders
 

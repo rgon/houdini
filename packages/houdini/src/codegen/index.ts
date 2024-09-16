@@ -1,11 +1,11 @@
 import * as graphql from 'graphql'
 
-import type { Config, PluginHooks, Document, LogLevels } from '../lib'
-import { runPipeline as run, LogLevel, find_graphql, parseJS, HoudiniError, fs, path } from '../lib'
-import { ArtifactKind, type ArtifactKinds } from '../runtime/lib/types'
-import * as generators from './generators'
-import * as transforms from './transforms'
-import * as validators from './validators'
+import type { Config, PluginHooks, Document, LogLevels } from '../lib/index.js'
+import { runPipeline as run, LogLevel, find_graphql, parseJS, HoudiniError, fs, path } from '../lib/index.js'
+import { ArtifactKind, type ArtifactKinds } from '../runtime/lib/types.js'
+import * as generators from './generators/index.js'
+import * as transforms from './transforms/index.js'
+import * as validators from './validators/index.js'
 
 // the main entry point of the compile script
 export default async function compile(config: Config) {

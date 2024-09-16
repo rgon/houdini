@@ -1,7 +1,7 @@
 import * as graphql from 'graphql'
 
-import type { Config, Document } from '../../lib'
-import { parentTypeFromAncestors, unwrapType } from '../../lib'
+import type { Config, Document } from '../../lib/index.js'
+import { parentTypeFromAncestors, unwrapType } from '../../lib/index.js'
 
 // typename adds __typename to the selection set of any unions or interfaces
 export default async function addTypename(config: Config, documents: Document[]): Promise<void> {

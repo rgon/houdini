@@ -1,4 +1,4 @@
-import { fs, path } from '.'
+import { fs, path } from './index.js'
 
 export type HoudiniFrameworkInfo =
 	| {

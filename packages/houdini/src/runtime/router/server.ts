@@ -2,11 +2,11 @@ import { createServerAdapter as createAdapter } from '@whatwg-node/server'
 import { type GraphQLSchema, parse, execute } from 'graphql'
 import { createYoga } from 'graphql-yoga'
 
-import type { HoudiniClient } from '../client'
-import { localApiSessionKeys, localApiEndpoint, getCurrentConfig } from '../lib/config'
-import { find_match } from './match'
-import { get_session, handle_request } from './session'
-import type { RouterManifest, RouterPageManifest, YogaServerOptions } from './types'
+import type { HoudiniClient } from '../client/index.js'
+import { localApiSessionKeys, localApiEndpoint, getCurrentConfig } from '../lib/config.js'
+import { find_match } from './match.js'
+import { get_session, handle_request } from './session.js'
+import type { RouterManifest, RouterPageManifest, YogaServerOptions } from './types.js'
 
 // load the plugin config
 const config_file = getCurrentConfig()

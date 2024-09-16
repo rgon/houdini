@@ -1,7 +1,7 @@
-import type { Cache } from '../../cache/cache'
-import { deepEquals } from '../../lib/deepEquals'
-import { type SubscriptionSpec, ArtifactKind, DataSource } from '../../lib/types'
-import { documentPlugin } from '../utils'
+import type { Cache } from '../../cache/cache.js'
+import { deepEquals } from '../../lib/deepEquals.js'
+import { type SubscriptionSpec, ArtifactKind, DataSource } from '../../lib/types.js'
+import { documentPlugin } from '../utils/index.js'
 
 // the purpose of the fragment plugin is to provide fine-reactivity for cache updates
 // there are no network requests that get sent. send() always returns the initial value

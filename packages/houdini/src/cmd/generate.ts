@@ -1,7 +1,7 @@
-import codegen from '../codegen'
-import type { Config, ConfigFile } from '../lib'
-import { formatErrors, getConfig, loadLocalSchema } from '../lib'
-import pullSchema from './pullSchema'
+import codegen from '../codegen/index.js'
+import type { Config, ConfigFile } from '../lib/index.js'
+import { formatErrors, getConfig, loadLocalSchema } from '../lib/index.js'
+import pullSchema from './pullSchema.js'
 
 export async function generate(
 	args: {

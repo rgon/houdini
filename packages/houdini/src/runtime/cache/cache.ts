@@ -1,9 +1,9 @@
-import { computeKey, PendingValue } from '../lib'
-import type { ConfigFile } from '../lib/config'
-import { computeID, defaultConfigValues, keyFieldsForType, getCurrentConfig } from '../lib/config'
-import { deepEquals } from '../lib/deepEquals'
-import { flatten } from '../lib/flatten'
-import { getFieldsForType } from '../lib/selection'
+import { computeKey, PendingValue } from '../lib/index.js'
+import type { ConfigFile } from '../lib/config.js'
+import { computeID, defaultConfigValues, keyFieldsForType, getCurrentConfig } from '../lib/config.js'
+import { deepEquals } from '../lib/deepEquals.js'
+import { flatten } from '../lib/flatten.js'
+import { getFieldsForType } from '../lib/selection.js'
 import type {
 	GraphQLObject,
 	GraphQLValue,
@@ -12,16 +12,16 @@ import type {
 	SubscriptionSpec,
 	ValueMap,
 	ValueNode,
-} from '../lib/types'
-import { fragmentKey } from '../lib/types'
-import { GarbageCollector } from './gc'
-import type { ListCollection } from './lists'
-import { ListManager } from './lists'
-import { StaleManager } from './staleManager'
-import type { Layer, LayerID } from './storage'
-import { InMemoryStorage } from './storage'
-import { evaluateKey, rootID } from './stuff'
-import { InMemorySubscriptions, type FieldSelection } from './subscription'
+} from '../lib/types.js'
+import { fragmentKey } from '../lib/types.js'
+import { GarbageCollector } from './gc.js'
+import type { ListCollection } from './lists.js'
+import { ListManager } from './lists.js'
+import { StaleManager } from './staleManager.js'
+import type { Layer, LayerID } from './storage.js'
+import { InMemoryStorage } from './storage.js'
+import { evaluateKey, rootID } from './stuff.js'
+import { InMemorySubscriptions, type FieldSelection } from './subscription.js'
 
 export class Cache {
 	// the internal implementation for a lot of the cache's methods are moved into

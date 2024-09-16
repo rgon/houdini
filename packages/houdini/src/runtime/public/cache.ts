@@ -1,7 +1,7 @@
-import type { Cache as _Cache } from '../cache/cache'
-import { getCurrentConfig, marshalInputs, type QueryArtifact } from '../lib'
-import { ListCollection } from './list'
-import { Record } from './record'
+import type { Cache as _Cache } from '../cache/cache.js'
+import { getCurrentConfig, marshalInputs, type QueryArtifact } from '../lib/index.js'
+import { ListCollection } from './list.js'
+import { Record } from './record.js'
 import type {
 	ArgType,
 	CacheTypeDef,
@@ -12,7 +12,7 @@ import type {
 	TypeFieldNames,
 	TypeNames,
 	ValidLists,
-} from './types'
+} from './types.js'
 
 export class Cache<Def extends CacheTypeDef> {
 	_internal_unstable: _Cache

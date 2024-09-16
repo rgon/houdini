@@ -1,17 +1,17 @@
 import { cyan, green } from '@kitql/helpers'
-import type { ExpressionKind, StatementKind, TSTypeKind } from 'ast-types/lib/gen/kinds'
+import type { ExpressionKind, StatementKind, TSTypeKind } from 'ast-types/lib/gen/kinds.js'
 import type * as graphql from 'graphql'
 import * as recast from 'recast'
 
-import type { Config, Document, DocumentArtifact } from '../../../lib'
-import { printJS, HoudiniError, siteURL, fs, path } from '../../../lib'
-import { readonlyProperty, tsTypeReference } from '../../../lib/typescript'
-import { fragmentArgumentsDefinitions } from '../../transforms/fragmentVariables'
-import { flattenSelections } from '../../utils'
-import { serializeValue } from '../artifacts/utils'
-import { addReferencedInputTypes } from './addReferencedInputTypes'
-import { fragmentKey, inlineType } from './inlineType'
-import { withLoadingState } from './loadingState'
+import type { Config, Document, DocumentArtifact } from '../../../lib/index.js'
+import { printJS, HoudiniError, siteURL, fs, path } from '../../../lib/index.js'
+import { readonlyProperty, tsTypeReference } from '../../../lib/typescript.js'
+import { fragmentArgumentsDefinitions } from '../../transforms/fragmentVariables.js'
+import { flattenSelections } from '../../utils/index.js'
+import { serializeValue } from '../artifacts/utils.js'
+import { addReferencedInputTypes } from './addReferencedInputTypes.js'
+import { fragmentKey, inlineType } from './inlineType.js'
+import { withLoadingState } from './loadingState.js'
 
 const AST = recast.types.builders
 

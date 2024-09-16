@@ -2,7 +2,7 @@ import { cyan } from '@kitql/helpers'
 import * as graphql from 'graphql'
 import fetch from 'node-fetch'
 
-import * as fs from './fs'
+import * as fs from './fs.js'
 
 export async function pullSchema(
 	url: string,

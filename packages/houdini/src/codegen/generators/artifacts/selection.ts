@@ -1,18 +1,18 @@
 import * as graphql from 'graphql'
 
-import type { Config, Document } from '../../../lib'
-import { TypeWrapper, unwrapType, deepMerge, getRootType, HoudiniError } from '../../../lib'
+import type { Config, Document } from '../../../lib/index.js'
+import { TypeWrapper, unwrapType, deepMerge, getRootType, HoudiniError } from '../../../lib/index.js'
 import {
 	RefetchUpdateMode,
 	type MutationOperation,
 	type SubscriptionSelection,
 	type LoadingSpec,
-} from '../../../runtime/lib/types'
-import { withArguments } from '../../transforms/fragmentVariables'
-import { connectionSelection } from '../../transforms/list'
-import { stripLoc } from '../../utils/stripLoc'
-import fieldKey from './fieldKey'
-import { convertValue } from './utils'
+} from '../../../runtime/lib/types.js'
+import { withArguments } from '../../transforms/fragmentVariables.js'
+import { connectionSelection } from '../../transforms/list.js'
+import { stripLoc } from '../../utils/stripLoc.js'
+import fieldKey from './fieldKey.js'
+import { convertValue } from './utils.js'
 
 // we're going to generate the selection in two passes. the first will create the various field selections
 // and then the second will map the concrete selections onto the abstract ones

@@ -1,11 +1,11 @@
 import { green, yellow } from '@kitql/helpers'
 import * as graphql from 'graphql'
 
-import type { Config, Document } from '../../lib'
-import { parentTypeFromAncestors, HoudiniError, siteURL, TypeWrapper, unwrapType } from '../../lib'
-import { ArtifactKind } from '../../runtime/lib/types'
-import { objectIdentificationSelection } from '../utils/objectIdentificationSelection'
-import { pageInfoSelection } from './paginate'
+import type { Config, Document } from '../../lib/index.js'
+import { parentTypeFromAncestors, HoudiniError, siteURL, TypeWrapper, unwrapType } from '../../lib/index.js'
+import { ArtifactKind } from '../../runtime/lib/types.js'
+import { objectIdentificationSelection } from '../utils/objectIdentificationSelection.js'
+import { pageInfoSelection } from './paginate.js'
 
 // addListFragments adds fragments for the fields tagged with @list
 export default async function addListFragments(

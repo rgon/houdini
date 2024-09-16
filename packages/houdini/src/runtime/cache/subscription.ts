@@ -1,13 +1,13 @@
-import { flatten } from '../lib/flatten'
-import { getFieldsForType } from '../lib/selection'
+import { flatten } from '../lib/flatten.js'
+import { getFieldsForType } from '../lib/selection.js'
 import type {
 	GraphQLValue,
 	SubscriptionSelection,
 	SubscriptionSpec,
 	NestedList,
-} from '../lib/types'
-import { type Cache } from './cache'
-import { evaluateKey, rootID } from './stuff'
+} from '../lib/types.js'
+import { type Cache } from './cache.js'
+import { evaluateKey, rootID } from './stuff.js'
 
 export type FieldSelection = [
 	SubscriptionSpec,

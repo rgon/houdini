@@ -9,15 +9,15 @@ import {
 	type TypeWrapper,
 	unwrapType,
 	parse_page_pattern,
-} from '..'
-import type { ProjectManifest, PageManifest, QueryManifest } from '../../runtime/lib/types'
+} from '../index.js'
+import type { ProjectManifest, PageManifest, QueryManifest } from '../../runtime/lib/types.js'
 import {
 	read_layoutQuery,
 	read_layoutView,
 	read_pageView,
 	read_pageQuery,
 	page_id,
-} from './conventions'
+} from './conventions.js'
 
 export type { ProjectManifest, PageManifest, QueryManifest }
 

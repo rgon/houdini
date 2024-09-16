@@ -1,7 +1,7 @@
 // locals
-import type { Config, Document } from '../../../lib'
-import { fs, path } from '../../../lib'
-import { cjsIndexFilePreamble, exportStarFrom, exportDefaultFrom } from '../../utils'
+import type { Config, Document } from '../../../lib/index.js'
+import { fs, path } from '../../../lib/index.js'
+import { cjsIndexFilePreamble, exportStarFrom, exportDefaultFrom } from '../../utils/index.js'
 
 // every document in the application should be re-exported from the root. this allows the user to balance
 // code-splitting concerns with the "cleanliness" of importing from a single location

@@ -1,10 +1,10 @@
-import _cache from './cache'
-import type { Cache as InternalCache } from './cache/cache'
-import type { CacheTypeDef } from './generated'
-import { Cache } from './public'
+import _cache from './cache/index.js'
+import type { Cache as InternalCache } from './cache/cache.js'
+import type { CacheTypeDef } from './generated.js'
+import { Cache } from './public/index.js'
 
-export * from './client'
-export * from './lib'
+export * from './client/index.js'
+export * from './lib/index.js'
 
 // this template tag gets removed by the preprocessor so it should never be invoked.
 // this function must return any so that we can assign it a type in a variable declaration (ie an inline store)

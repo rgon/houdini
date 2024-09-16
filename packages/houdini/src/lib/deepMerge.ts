@@ -1,6 +1,6 @@
 import merge from 'deepmerge'
 
-import { HoudiniError } from './error'
+import { HoudiniError } from './error.js'
 
 export function deepMerge<T>(filepath: string, ...targets: T[]): T {
 	try {

@@ -23,6 +23,8 @@ export default async function generate_typedefs({ plugin }) {
 	compile(files, {
 		...tsConfig.compilerOptions,
 		moduleResolution: ModuleResolutionKind.NodeNext,
+		module: ts.ModuleKind.NodeNext,
+		target: ts.ScriptTarget.ESNext,
 		outDir: 'build',
 		project: path.join(process.cwd(), '..', '..'),
 		baseUrl: process.cwd(),

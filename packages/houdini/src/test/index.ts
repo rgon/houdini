@@ -1,11 +1,11 @@
 import * as graphql from 'graphql'
 import { vol } from 'memfs'
 
-import { runPipeline } from '../codegen'
-import type { Document } from '../lib'
-import { Config, fs, path } from '../lib'
-import type { ConfigFile } from '../runtime/lib/config'
-import { ArtifactKind, type ArtifactKinds } from '../runtime/lib/types'
+import { runPipeline } from '../codegen/index.js'
+import type { Document } from '../lib/index.js'
+import { Config, fs, path } from '../lib/index.js'
+import type { ConfigFile } from '../runtime/lib/config.js'
+import { ArtifactKind, type ArtifactKinds } from '../runtime/lib/types.js'
 
 export function testConfigFile({ plugins, ...config }: Partial<ConfigFile> = {}): ConfigFile {
 	return {

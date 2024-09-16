@@ -1,8 +1,8 @@
-import type { Cache } from '../../cache/cache'
-import { marshalSelection } from '../../lib/scalars'
-import type { SubscriptionSpec } from '../../lib/types'
-import { ArtifactKind } from '../../lib/types'
-import { documentPlugin } from '../utils'
+import type { Cache } from '../../cache/cache.js'
+import { marshalSelection } from '../../lib/scalars.js'
+import type { SubscriptionSpec } from '../../lib/types.js'
+import { ArtifactKind } from '../../lib/types.js'
+import { documentPlugin } from '../utils/index.js'
 
 export const mutation = (cache: Cache) =>
 	documentPlugin(ArtifactKind.Mutation, () => {

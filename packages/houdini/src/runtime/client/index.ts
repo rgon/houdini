@@ -1,12 +1,12 @@
 /// <reference path="../../../../../houdini.d.ts" />
-import cacheRef from '../cache'
-import type { Cache } from '../cache/cache'
-import { getCurrentConfig, localApiEndpoint } from '../lib'
-import { flatten } from '../lib/flatten'
-import type { DocumentArtifact, GraphQLVariables, GraphQLObject, NestedList } from '../lib/types'
-import type { ClientHooks, ClientPlugin } from './documentStore'
-import { DocumentStore } from './documentStore'
-import type { FetchParamFn, ThrowOnErrorOperations, ThrowOnErrorParams } from './plugins'
+import cacheRef from '../cache/index.js'
+import type { Cache } from '../cache/cache.js'
+import { getCurrentConfig, localApiEndpoint } from '../lib/index.js'
+import { flatten } from '../lib/flatten.js'
+import type { DocumentArtifact, GraphQLVariables, GraphQLObject, NestedList } from '../lib/types.js'
+import type { ClientHooks, ClientPlugin } from './documentStore.js'
+import { DocumentStore } from './documentStore.js'
+import type { FetchParamFn, ThrowOnErrorOperations, ThrowOnErrorParams } from './plugins/index.js'
 import {
 	fetch as fetchPlugin,
 	fetchParams as fetchParamsPlugin,
@@ -15,12 +15,12 @@ import {
 	query as queryPlugin,
 	throwOnError as throwOnErrorPlugin,
 	optimisticKeys,
-} from './plugins'
-import pluginsFromPlugins from './plugins/injectedPlugins'
+} from './plugins/index.js'
+import pluginsFromPlugins from './plugins/injectedPlugins.js'
 
 // export the plugin constructors
-export { DocumentStore, type ClientPlugin, type SendParams } from './documentStore'
-export { fetch, mutation, query, subscription } from './plugins'
+export { DocumentStore, type ClientPlugin, type SendParams } from './documentStore.js'
+export { fetch, mutation, query, subscription } from './plugins/index.js'
 
 export type HoudiniClientConstructorArgs = {
 	url?: string

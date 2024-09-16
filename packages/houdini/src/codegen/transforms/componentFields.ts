@@ -1,6 +1,6 @@
 import * as graphql from 'graphql'
 
-import type { Config, Document } from '../../lib'
+import type { Config, Document } from '../../lib/index.js'
 
 export type FragmentDependency = {
 	definition: graphql.FragmentDefinitionNode

@@ -1,9 +1,9 @@
 import * as graphql from 'graphql'
 
-import { unwrapType } from '../../../lib'
-import type { Config } from '../../../lib/config'
-import { variableValue } from '../../../runtime/cache/cache'
-import type { InputObject } from '../../../runtime/lib/types'
+import { unwrapType } from '../../../lib/index.js'
+import type { Config } from '../../../lib/config.js'
+import { variableValue } from '../../../runtime/cache/cache.js'
+import type { InputObject } from '../../../runtime/lib/types.js'
 
 export function inputObject(
 	config: Config,

@@ -1,9 +1,9 @@
-import type { StatementKind, TSPropertySignatureKind } from 'ast-types/lib/gen/kinds'
+import type { StatementKind, TSPropertySignatureKind } from 'ast-types/lib/gen/kinds.js'
 import * as graphql from 'graphql'
 import * as recast from 'recast'
 
-import type { Config } from '../../../lib'
-import { ensureImports, HoudiniError, unwrapType, tsTypeReference } from '../../../lib'
+import type { Config } from '../../../lib/index.js'
+import { ensureImports, HoudiniError, unwrapType, tsTypeReference } from '../../../lib/index.js'
 
 const AST = recast.types.builders
 

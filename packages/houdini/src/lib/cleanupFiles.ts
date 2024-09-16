@@ -1,5 +1,5 @@
-import * as fs from './fs'
-import * as path from './path'
+import * as fs from './fs.js'
+import * as path from './path.js'
 
 export async function cleanupFiles(pathFolder: string, listOfObj: string[]): Promise<string[]> {
 	const listFile = await fs.readdir(pathFolder)

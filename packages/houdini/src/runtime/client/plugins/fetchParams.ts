@@ -1,5 +1,5 @@
-import type { DocumentArtifact } from '../../lib/types'
-import type { ClientPlugin, ClientPluginContext } from '../documentStore'
+import type { DocumentArtifact } from '../../lib/types.js'
+import type { ClientPlugin, ClientPluginContext } from '../documentStore.js'
 
 export type FetchParamFn = (ctx: FetchParamsInput) => Required<ClientPluginContext>['fetchParams']
 

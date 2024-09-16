@@ -9,7 +9,7 @@ import type {
 	MutationArtifact,
 	QueryArtifact,
 	SubscriptionSelection,
-} from '../../../lib'
+} from '../../../lib/index.js'
 import {
 	ArtifactKind,
 	HoudiniError,
@@ -20,15 +20,15 @@ import {
 	hashRaw,
 	parentTypeFromAncestors,
 	printJS,
-} from '../../../lib'
-import { flattenSelections, moduleExport } from '../../utils'
-import { fragmentArgumentsDefinitions } from '.././../transforms/fragmentVariables'
-import writeIndexFile from './indexFile'
-import { inputObject } from './inputs'
-import type { FilterMap } from './operations'
-import { operationsByPath } from './operations'
-import selection from './selection'
-import { serializeValue } from './utils'
+} from '../../../lib/index.js'
+import { flattenSelections, moduleExport } from '../../utils/index.js'
+import { fragmentArgumentsDefinitions } from '.././../transforms/fragmentVariables.js'
+import writeIndexFile from './indexFile.js'
+import { inputObject } from './inputs.js'
+import type { FilterMap } from './operations.js'
+import { operationsByPath } from './operations.js'
+import selection from './selection.js'
+import { serializeValue } from './utils.js'
 
 const AST = recast.types.builders
 

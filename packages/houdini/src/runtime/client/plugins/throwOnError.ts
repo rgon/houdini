@@ -1,6 +1,6 @@
-import type { ArtifactKinds, QueryResult } from '../../lib'
-import { ArtifactKind } from '../../lib'
-import type { ClientPlugin, ClientPluginContext } from '../documentStore'
+import type { ArtifactKinds, QueryResult } from '../../lib/index.js'
+import { ArtifactKind } from '../../lib/index.js'
+import type { ClientPlugin, ClientPluginContext } from '../documentStore.js'
 
 export type ThrowOnErrorOperations = 'all' | 'query' | 'mutation' | 'subscription'
 

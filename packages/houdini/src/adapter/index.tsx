@@ -1,4 +1,4 @@
-import type { serverAdapterFactory as createAdapter } from '../runtime/router/server'
+import type { serverAdapterFactory as createAdapter } from '../runtime/router/server.js'
 
 export const endpoint: string = ''
 

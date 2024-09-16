@@ -1,9 +1,9 @@
 import * as graphql from 'graphql'
 
-import type { Config } from '../../../lib'
-import { parentTypeFromAncestors } from '../../../lib'
-import type { MutationOperation } from '../../../runtime/lib/types'
-import { convertValue } from './utils'
+import type { Config } from '../../../lib/index.js'
+import { parentTypeFromAncestors } from '../../../lib/index.js'
+import type { MutationOperation } from '../../../runtime/lib/types.js'
+import { convertValue } from './utils.js'
 
 // return the list of operations that are part of a mutation
 export function operationsByPath(

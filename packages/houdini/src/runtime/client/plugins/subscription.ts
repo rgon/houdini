@@ -1,7 +1,7 @@
-import { deepEquals } from '../../lib/deepEquals'
-import { ArtifactKind, DataSource } from '../../lib/types'
-import type { ClientPluginContext } from '../documentStore'
-import { documentPlugin } from '../utils'
+import { deepEquals } from '../../lib/deepEquals.js'
+import { ArtifactKind, DataSource } from '../../lib/types.js'
+import type { ClientPluginContext } from '../documentStore.js'
+import { documentPlugin } from '../utils/index.js'
 
 export function subscription(factory: SubscriptionHandler) {
 	return documentPlugin(ArtifactKind.Subscription, () => {

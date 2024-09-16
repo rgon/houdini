@@ -1,8 +1,8 @@
 import * as graphql from 'graphql'
 
-import type { Config } from '../../../lib'
-import { fs } from '../../../lib'
-import enums from './enums'
+import type { Config } from '../../../lib/index.js'
+import { fs } from '../../../lib/index.js'
+import enums from './enums.js'
 
 // schemaGenerator updates the schema file to contain all of the generated
 export default async function schemaGenerator(config: Config) {

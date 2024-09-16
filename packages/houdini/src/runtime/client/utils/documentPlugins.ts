@@ -1,10 +1,10 @@
-import type { ArtifactKinds } from '../../lib/types'
+import type { ArtifactKinds } from '../../lib/types.js'
 import type {
 	ClientPlugin,
 	ClientPluginExitPhase,
 	ClientPluginEnterPhase,
 	ClientHooks,
-} from '../documentStore'
+} from '../documentStore.js'
 
 export const documentPlugin = (kind: ArtifactKinds, source: () => ClientHooks): ClientPlugin => {
 	return () => {
