@@ -15,7 +15,7 @@
 		"react": "19.0.0-rc-eb259b5d3b-20240605",
 		"react-dom": "19.0.0-rc-eb259b5d3b-20240605",
 		"graphql-yoga": "4.0.4",
-		"graphql": "15.8.0",
+		"graphql": "^16.9.0",
 		"@whatwg-node/server": "^0.9.49"
 	},
 	"devDependencies": {
@@ -26,7 +26,7 @@
 		"vite": "^5.4.5"
 	},
 	"resolutions": {
-		"graphql": "15.8.0",
+		"graphql": "16.9.0",
 		"react": "19.0.0-rc-eb259b5d3b-20240605",
 		"react-dom": "19.0.0-rc-eb259b5d3b-20240605"
 	}

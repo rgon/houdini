@@ -13,6 +13,7 @@ export * from './plugin.js'
 export * from './detectTools.js'
 export * from '../runtime/router/match.js'
 export * from './typescript.js'
+export * from './watchAndRun.js'
 
 export * from './walk.js'
 export type { EmbeddedGraphqlDocument } from './walk.js'

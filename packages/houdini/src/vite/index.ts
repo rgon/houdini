@@ -1,11 +1,10 @@
 import type * as graphql from 'graphql'
 import minimatch from 'minimatch'
 import type { Plugin } from 'vite'
-import watch_and_run from 'vite-plugin-watch-and-run'
 
 import generate from '../codegen/index.js'
 import type { PluginConfig } from '../lib/index.js'
-import { getConfig, formatErrors, path } from '../lib/index.js'
+import { getConfig, formatErrors, path, watchAndRun } from '../lib/index.js'
 import houdini_vite from './houdini.js'
 import { watch_local_schema, watch_remote_schema } from './schema.js'
 
@@ -26,10 +25,10 @@ export default function (opts?: PluginConfig): (Plugin | null)[] {
 		houdini_vite(opts),
 		watch_remote_schema(opts),
 		watch_local_schema(watchSchemaListref),
-		watch_and_run([
+		watchAndRun([
 			{
 				name: 'Houdini',
-				quiet: true,
+				logs: [],
 				async watchFile(filepath: string) {
 					// load the config file
 					const config = await getConfig(opts)
@@ -76,6 +75,6 @@ export default function (opts?: PluginConfig): (Plugin | null)[] {
 				watchKind: ['add', 'change', 'unlink'],
 				formatErrors,
 			},
-		]),
+		]) as Plugin,
 	]
 }
