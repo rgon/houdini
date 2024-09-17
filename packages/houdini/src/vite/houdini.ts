@@ -1,5 +1,5 @@
 import type * as graphql from 'graphql'
-import type { SourceMapInput } from 'rollup'
+import type { InputOptions, SourceMapInput } from 'rollup'
 import type { Plugin as VitePlugin, UserConfig, ResolvedConfig, ConfigEnv } from 'vite'
 
 import generate from '../codegen/index.js'
@@ -171,7 +171,6 @@ export default function Plugin(opts: PluginConfig = {}): VitePlugin {
 					continue
 				}
 
-				// @ts-expect-error
 				await plugin.vite!.buildStart.call(this, {
 					...args,
 					houdiniConfig: config,
@@ -201,11 +200,10 @@ export default function Plugin(opts: PluginConfig = {}): VitePlugin {
 					continue
 				}
 
-				// @ts-expect-error
 				options = plugin.vite!.options.call(this, {
 					...options,
 					houdiniConfig: config,
-				})
+				}) as InputOptions
 			}
 
 			return Object.fromEntries(

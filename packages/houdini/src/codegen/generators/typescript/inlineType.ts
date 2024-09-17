@@ -427,6 +427,7 @@ export function inlineType({
 						AST.tsIntersectionType(
 							[tsType]
 								// remove any inner nullability flags
+								// @ts-expect-error
 								.flatMap((type) => {
 									// if we are looking at a union we might have nulls in there
 									if (type.type === 'TSUnionType') {

@@ -1,5 +1,4 @@
-import type { GraphQLVariables } from '$houdini/runtime/lib/types.js'
-
+import type { GraphQLVariables } from '../lib/types.js'
 import { parseScalar, type ConfigFile } from '../lib/index.js'
 import type { RouterManifest, RouterPageManifest } from './types.js'
 

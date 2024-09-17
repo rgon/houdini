@@ -355,14 +355,14 @@ export function wrapType({
 				kind: graphql.Kind.NAME,
 				value: type.name,
 			},
-		}
+		} as graphql.TypeNode
 	}
 
 	return {
 		kind,
 		// @ts-ignore
 		type: wrapType({ type, wrappers: tail }),
-	}
+	} as graphql.TypeNode
 }
 
 export enum TypeWrapper {

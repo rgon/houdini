@@ -1,6 +1,6 @@
-import type { QueryArtifact } from '$houdini/runtime/lib/types.js'
 import type { createYoga } from 'graphql-yoga'
 
+import type { QueryArtifact } from '../lib/types.js'
 import type { RouteParam } from './match.js'
 
 export type YogaServer = ReturnType<typeof createYoga>

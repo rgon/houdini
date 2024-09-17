@@ -114,7 +114,7 @@ export function serialize(
 		sameSite: string | boolean
 	}
 ): string {
-	let opt = options || {}
+	let opt = options || {} as any
 	let enc = opt.encode || encode
 
 	if (typeof enc !== 'function') {

@@ -652,7 +652,7 @@ class CacheInternal {
 					Array.isArray(previousValue))
 			) {
 				// make a shallow copy of the previous value we can  mutate
-				let oldIDs = [...(previousValue || [])] as (string | null)[]
+				let oldIDs = [...(previousValue as [] || [])] as (string | null)[]
 
 				// this field could be a connection (a list of references to edge objects).
 				// inserts in this list might insert objects into the connection that
