@@ -4,8 +4,8 @@
 		"checkJs": true,
 		"noEmit": true,
 		"target": "esnext",
-		"module": "esnext",
-		"moduleResolution": "node",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
 		"allowSyntheticDefaultImports": true,
 		"strict": true,
 		"skipLibCheck": true

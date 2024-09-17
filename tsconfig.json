@@ -2,8 +2,8 @@
 	"exclude": ["node_modules", "packages/*/build/**"],
 	"include": ["packages/**/*.ts", "packages/**/*.tsx"],
 	"compilerOptions": {
-		"moduleResolution": "node",
-		"module": "es2020",
+		"moduleResolution": "NodeNext",
+		"module": "NodeNext",
 		"lib": ["ES2021", "DOM", "ES2021.String"],
 		"target": "ESNext",
 		"isolatedModules": true,
