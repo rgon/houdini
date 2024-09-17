@@ -6,14 +6,15 @@ import { bold, cyan, gray, grey, italic, white } from 'kleur/colors'
 import fs, { readFileSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { exit } from 'node:process'
-import { fileURLToPath } from 'node:url'
+import { fileURLToPath, pathToFileURL } from 'node:url'
 
 // the first argument is the name of the project
 let projectDir = process.argv[2]
 let projectName = projectDir
 
+const importMetaUrlEquivalent = pathToFileURL(__filename).href;
 // log the version of create-houdini that this was run with by looking at the packge's package.json
-const { version } = JSON.parse(fs.readFileSync(new URL('package.json', import.meta.url), 'utf-8'))
+const { version } = JSON.parse(fs.readFileSync(new URL('package.json', import.meta?.url ?? importMetaUrlEquivalent), 'utf-8'))
 console.log(`${grey(`create-houdini version ${version}`)}\n`)
 
 // prepare options

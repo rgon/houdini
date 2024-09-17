@@ -4,7 +4,10 @@ import { createServer, type IncomingMessage, type ServerResponse } from 'node:ht
 import path, { dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-const __filename = fileURLToPath(import.meta.url)
+if (typeof __filename === 'undefined') {
+	globalThis.__filename = fileURLToPath(import.meta.url)
+}
+// const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 // create the production server adapter

@@ -4,7 +4,9 @@ import { fileURLToPath } from 'node:url'
 const adapter: Adapter = async ({ outDir, adapterPath }) => {
 	// read the contents of the app file
 	let serverContents = (await fs.readFile(
-		fileURLToPath(new URL('./app.js', import.meta.url).href)
+		import.meta ?
+			fileURLToPath(new URL('./app.js', import.meta.url).href)
+			: require.resolve('./app.js')
 	))!
 
 	// make sure that the adapter module imports from the correct path
