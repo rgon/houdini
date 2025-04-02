@@ -1,7 +1,7 @@
 import minimatch from 'minimatch'
-import type { EnvironmentModuleNode } from 'vite'
+import type { ModuleNode } from 'vite'
 
-import { path, getConfig, type PluginConfig, type Config } from '../lib'
+import { path, type Config } from '../lib'
 
 export function isGraphQLFile(filepath: string): boolean {
 	if (!filepath) {
@@ -27,7 +27,7 @@ export async function shouldReactToFileChange(filepath: string, config: Config):
 }
 
 export function fileDependsOnHoudini(
-	modules: EnvironmentModuleNode[],
+	modules: ModuleNode[],
 	houdiniPath: string
 ): Boolean {
 	// Iterate over all the related modules of the HMR event, and get what they import

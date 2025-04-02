@@ -5,7 +5,7 @@ import type {
 	UserConfig,
 	ResolvedConfig,
 	ConfigEnv,
-	EnvironmentModuleNode,
+	ModuleNode,
 } from 'vite'
 
 import generate from '../codegen'
@@ -45,7 +45,7 @@ export default function Plugin(opts: PluginConfig = {}): VitePlugin {
 		// is processed by the user's library-specific plugins.
 		enforce: 'pre',
 
-		async hotUpdate({ file, server, modules, timestamp }): Promise<EnvironmentModuleNode[]> {
+		async handleHotUpdate({ file, server, modules, timestamp }): Promise<ModuleNode[]> {
 			// load the config file
 			const config = await getConfig(opts)
 
@@ -61,7 +61,7 @@ export default function Plugin(opts: PluginConfig = {}): VitePlugin {
 			const isGqlFile = isGraphQLFile(file)
 
 			if (!(shouldReact && (fileDependsOnHoudini(modules, runtimeDir) || isGqlFile))) {
-				return []
+				return modules
 			}
 
 			if (config.localSchema) {
@@ -71,7 +71,7 @@ export default function Plugin(opts: PluginConfig = {}): VitePlugin {
 				// config.schema = await loadLocalSchema(config)
 			}
 
-			const environment = this.environment
+			const environment = server
 
 			// make sure we behave as if we're generating from inside the plugin (changes logging behavior)
 			config.pluginMode = true
@@ -90,21 +90,23 @@ export default function Plugin(opts: PluginConfig = {}): VitePlugin {
 				}
 			}
 			lastHotUpdateEvent = {
-				environment: environment.name,
+				environment: 'server',
 				file,
 				timestamp,
 			}
 
 			// if there are no changes, don't trigger a reload
 			if (!artifactStats) {
-				return []
+				return modules
 			}
 
 			console.log('🎩 ⬆️ bundle changed, triggering HMR update')
 
 			// TODO: return tainted files from generate()
 			// Instead, walk over the entire houdini directory and invalidate all modules
-			const taintedModules: EnvironmentModuleNode[] = []
+			// Include the received modules: handleHotUpdate does not behave like environment hotUpdate
+			// and requires the modules to be passed in
+			const taintedModules: ModuleNode[] = modules
 			for await (const file of fs.walk(runtimeDir)) {
 				const module = environment.moduleGraph.getModuleById(file)
 				if (module) {
@@ -112,9 +114,6 @@ export default function Plugin(opts: PluginConfig = {}): VitePlugin {
 				}
 			}
 
-			// invalidate all the codegenerated modules
-			// NOTE: not returning the original module here, we expect other plugins to handle
-			// their own dependencies (i.e sveltekit)
 			return taintedModules
 		},
 
