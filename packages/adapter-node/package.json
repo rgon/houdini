@@ -23,7 +23,7 @@
     "devDependencies": {
         "@types/node": "^22.5.1",
         "scripts": "workspace:^",
-        "tsup": "^7.2.0"
+        "tsup": "^8.4.0"
     },
     "dependencies": {
         "houdini": "workspace:^"
