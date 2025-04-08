@@ -140,11 +140,6 @@ async function build({ packages, source, bundle = true, plugin, cmd }) {
 				banner: {
 					js: header,
 				},
-				loader: {
-					'.js': 'js',
-					'.ts': 'ts',
-					'.tsx': 'ts',
-				},
 				plugins: [
 					replace({
 						HOUDINI_PACKAGE_VERSION: packages.houdini.version,
