@@ -1,5 +1,11 @@
 # houdini-svelte
 
+## 2.1.15
+
+### Patch Changes
+
+-   [`59025891`](https://github.com/HoudiniGraphql/houdini/commit/590258918f3272105c629ceab6ada8c178480443) - properly warn against using page/layout queries when not include-ing .js files in houdini.config.js
+
 ## 2.1.14
 
 ### Patch Changes
